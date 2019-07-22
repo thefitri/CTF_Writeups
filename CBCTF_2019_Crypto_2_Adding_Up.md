@@ -95,7 +95,7 @@ To check if my algorithm is correct, I made sure that ct(12) is equal to my outp
 394966864727721633978749819285325869377850
 ```
 
-**which is WRONG!**. I'm not sure if my algorithm was wrong or if the organiser entered the wrong value (Remember, we checked the return value of input 12 and both returned 144). No fret, I'll just increase the range tp (3,2021) and we got the right flag. YAY?! *[confused face]*
+**which is WRONG!**. I'm not sure if my algorithm was wrong or if the organiser entered the wrong value (Remember, we checked the return value of input 12 and both returned 144). No fret, I'll just increase the range to (3,2021) and we got the right flag. YAY?! *[confused face]*
 
 ```
 639069811559435586651349273985287139381962
@@ -114,10 +114,11 @@ def findflag(f):
     for x in range(f):
         n = n_minus2 + n_minus1
 
-        n_minus2 = n_minus1
-        n_minus1 = n
         if n == 0:
-            n_minus1 = 1
+	    n = 1
+	    
+        n_minus2 = n_minus1
+        n_minus1 = n 
 
         return n
 
