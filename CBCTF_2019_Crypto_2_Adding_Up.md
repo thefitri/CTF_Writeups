@@ -101,4 +101,29 @@ To check if my algorithm is correct, I made sure that ct(12) is equal to my outp
 639069811559435586651349273985287139381962
 ```
 
-CBCTF{639069811559435586651349273985287139381962}     
+**CBCTF{639069811559435586651349273985287139381962}**
+
+Expanding on this we can rewrite our code as such:
+
+```python
+def findflag(f):
+    n_minus2 = 0
+    n_minus1 = 0
+    n = 0
+
+    for x in range(f):
+        n = n_minus2 + n_minus1
+
+        n_minus2 = n_minus1
+        n_minus1 = n
+        if n == 0:
+            n_minus1 = 1
+
+        return n
+
+print "Your flag is: CBCTF{" + str(findflag(2019))[:42] + "}"
+```
+
+Now if we go back to the original code and input any number. The output will be equal to the code above. The value of the right answer is actually for ct(2020) or findflag(2020) and not ct(2019).
+
+*[derp face]*
