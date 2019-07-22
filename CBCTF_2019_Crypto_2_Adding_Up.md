@@ -8,7 +8,7 @@ print "Your flag is:" + str(ct(2019))[:42]
 
 # Approach and Answer
 
-*Note: I tweaked my original answer on this write-up to make it easier to understand. So it's different than the one I shared earlier.*
+*Note: I tweaked my original answer in this write-up to make it easier to understand. So it's different than the one I shared earlier.*
 
 Based on the syntax and keywords (def, print), we can assume the above is a python script. The first thing I did was to execute the script. It returns with **"RuntimeError: maximum recursion depth exceeded"**.
 
@@ -79,7 +79,7 @@ def countme():
     # print the last value in array a.
     print str(a[-1])[:42]
 
-print "Your flag is:" + str(ct(1000))[:42]            
+print "Your flag is:" + str(ct(12))[:42]            
 countme()
 ```
 
