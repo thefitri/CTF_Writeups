@@ -1,8 +1,10 @@
 # Question
 I love adding up previous two numbers.
 
+```
 def ct(f): return f if f < 2 else ct(f-2) + ct(f-1)
 print "Your flag is:" + str(ct(2019))[:42]
+```
 
 # Approach and Answer
 
